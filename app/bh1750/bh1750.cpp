@@ -97,7 +97,7 @@ namespace BH1750 {
 
     void BH1750::set_mtreg(std::uint8_t const mtreg) const noexcept
     {
-        auto const mtreg_value = std::clamp(mtreg, MTREG_MIN, MTREG_MAX);
+        auto const mtreg_value = std::clamp(static_cast<int>(mtreg), MTREG_MIN, MTREG_MAX);
         this->transmit_byte(0x40 | (mtreg_value >> 5));
         this->transmit_byte(0x60 | (mtreg_value & 0x1F));
     }

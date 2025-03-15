@@ -25,10 +25,10 @@ namespace BH1750 {
         ONETIME_LOW_RES_MODE = 0x23,
     };
 
-    constexpr std::uint8_t MTREG_MIN = 0x1F;
-    constexpr std::uint8_t MTREG_DEFAULT = 0x45;
-    constexpr std::uint8_t MTREG_MAX = 0xFE;
-    constexpr float MEASUREMENT_ACCURACY = 1.2F;
+    auto constexpr MTREG_MIN = 0x1F;
+    auto constexpr MTREG_DEFAULT = 0x45;
+    auto constexpr MTREG_MAX = 0xFE;
+    auto constexpr MEASUREMENT_ACCURACY = 1.2F;
 
     inline float mode_to_resolution(Mode const mode) noexcept
     {
